@@ -5,6 +5,7 @@ import NhtHome from './components/NhtHome'
 import NhtAbout from './components/NhtAbout'
 import NhtContact from './components/NhtContact'
 import NhtListUser from './components/NhtListUser'
+import NhtFormUser from './components/NhtFormUser'
 export default function NhtApp() {
 
   const ListUsers = [
@@ -14,6 +15,18 @@ export default function NhtApp() {
   ]
 
   const[nhtUsers, setNhtUsers] =useState(ListUsers)
+  
+  //Hàm xử lý sự kiện thêm mới
+  const nhtHandleAdd = (nhtParam)=>{
+    console.log("nhtHandleAdd", nhtParam);
+
+    setNhtUsers(prev =>{ 
+      return [
+      ...prev,
+      nhtParam
+    ]
+  })
+  }
   return (
     <div className='container border my-3'>
       <h1>React Router Dom - Demo - [Nguyễn Hữu Tuấn - K23CNT3]</h1>
@@ -25,6 +38,7 @@ export default function NhtApp() {
           <Route path='/about' element = {<NhtAbout/>} /> 
           <Route path='/contact' element = {<NhtContact/>} /> 
           <Route path='/list-user' element = {<NhtListUser renderNhtUsers={nhtUsers}/>} /> 
+          <Route path='/create-user' element = {<NhtFormUser onNhtAddNew={nhtHandleAdd} />} /> 
         </Routes>
 
       </Router>
