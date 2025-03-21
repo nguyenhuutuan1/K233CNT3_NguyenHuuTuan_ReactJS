@@ -7,7 +7,7 @@ import NhtApp from './NhtApp';
 const nhtRoot = ReactDOM.createRoot(document.getElementById('nhtRoot'));
 nhtRoot.render(
   <React.StrictMode>
-    <NhtApp />
+    <NhtApp/>
   </React.StrictMode>
 );
 

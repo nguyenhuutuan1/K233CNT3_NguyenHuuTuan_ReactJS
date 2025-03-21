@@ -1,0 +1,25 @@
+{
+    "users":[
+        {
+            "fullName":"Nguyen Huu Tuan",
+            "age":"20",
+            "class":"K23CNT3"
+        },
+        {
+            "fullName":"Nguyen Van Thinh",
+            "age":"21",
+            "class":"K23CNT4"
+        },
+        {
+            "fullName":"Tran Nhan Tong",
+            "age":"200",
+            "class":"K23CNT1"
+        }
+    ],
+    "students":[
+        {
+            "studentId":"SV0001",
+            "studentName":"Le Trong Tan"
+        }
+    ]
+}
